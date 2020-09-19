@@ -10,7 +10,7 @@ public class Main {
 	MainWindow dd = new MainWindow();
 	dd.setTitle("КГ Хныкин Таск 1");
 	dd.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	dd.setSize(1200, 700);
+	dd.setSize(1220, 750);
 	dd.setVisible(true);
     }
 

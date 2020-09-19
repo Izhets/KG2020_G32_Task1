@@ -10,19 +10,21 @@ public class MainWindow extends JFrame {
     JPanel mainPanel = new JPanel();
     JTextField tField = new JTextField();
 
-    public MainWindow() throws HeadlessException{
+    public MainWindow() throws HeadlessException {
+        DrawPanel dp = new DrawPanel();
+        this.add(dp);
+
         //setContentPane(mainPanel);
-        setBounds(300,300,300,300);
-        tField.setPreferredSize(new Dimension(150,50));
-        mainPanel.add(tField);
-        mainPanel.addMouseMotionListener(new MouseMotionAdapter(){
-            public void mouseMoved(MouseEvent me){
-                tField.setText("X="+me.getX()+" Y="+me.getY());
+        //setBounds(300, 300, 300, 300);
+
+        tField.setPreferredSize(new Dimension(150, 50));
+        dp.add(tField);
+        dp.addMouseMotionListener(new MouseMotionAdapter() {
+            public void mouseMoved(MouseEvent me) {
+                tField.setText("X=" + me.getX() + " Y=" + me.getY());
             }
         });
 
-        DrawPanel dp = new DrawPanel();
-        this.add(dp);
     }
 
 }
