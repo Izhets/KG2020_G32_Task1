@@ -22,7 +22,7 @@ public class Room implements Drawable {
         g.drawRect(86, 50, 1000, 450);
         g.drawLine(0, 0, 84, 50);
         g.drawLine(1200, 0, 1088, 50);
-        g.drawLine(0, 700, 85, 500);
+        g.drawLine(0, 700, 86, 500);
         g.drawLine(1200, 700, 1085, 500);
     }
 }

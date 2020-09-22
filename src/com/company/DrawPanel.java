@@ -12,7 +12,7 @@ public class DrawPanel extends JPanel {
     @Override
     public void paint(Graphics g) {
         Graphics2D gr = (Graphics2D) g;
-        s.draw(gr);
+        //s.draw(gr);
         r.draw(gr);
         c.draw(gr);
         //drawRoom(gr, Color.BLACK);
