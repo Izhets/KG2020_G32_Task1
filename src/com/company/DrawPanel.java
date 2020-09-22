@@ -8,6 +8,7 @@ public class DrawPanel extends JPanel {
     private Sun s = new Sun (130, 110,40,70,35, Color.BLACK);
     private Room r = new Room(Color.darkGray);
     private Carpet c = new Carpet (Color.darkGray);
+    private Table t = new Table (Color.darkGray);
 
     @Override
     public void paint(Graphics g) {
@@ -15,6 +16,8 @@ public class DrawPanel extends JPanel {
         //s.draw(gr);
         r.draw(gr);
         c.draw(gr);
+        t.draw(gr);
+
         //drawRoom(gr, Color.BLACK);
         //drawCarpet(gr, Color.BLACK);
     }
