@@ -46,18 +46,17 @@ public class DrawPanel extends JPanel {
 //    }
 
     //рисуем окно на стене
-    public static void drawWindow(Graphics2D g, Color c) {
-        g.setColor(c);
-        BasicStroke sizeLine = new BasicStroke(3);
-        g.setStroke(sizeLine);
-        
-    }
+//    public static void drawWindow(Graphics2D g, Color c) {
+//        g.setColor(c);
+//        BasicStroke sizeLine = new BasicStroke(3);
+//        g.setStroke(sizeLine);
+//
+//    }
 
 
-
-    public static void drawTable(Graphics2D g, Color c) {
-        g.setColor(c);
-        g.drawRect(100, 100, 30, 50);
-    }
+//    public static void drawTable(Graphics2D g, Color c) {
+//        g.setColor(c);
+//        g.drawRect(100, 100, 30, 50);
+//    }
 
 }
