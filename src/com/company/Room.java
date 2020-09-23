@@ -18,14 +18,48 @@ public class Room implements Drawable {
     }
 
     public static void drawRoom(Graphics2D g, Color c) {
-        g.setColor(c);
-        BasicStroke sizeLine = new BasicStroke(3);
+        g.setColor(Color.BLACK);
+        BasicStroke sizeLine = new BasicStroke(4);
         g.setStroke(sizeLine);
-        g.drawRect(86, 50, 1000, 450);
+
+        g.drawRect(88, 50, 995, 450);
+
+        g.setColor(Color.LIGHT_GRAY);
+        g.fillRect(91,53, 990, 445);
+
+        g.setPaint(Color.LIGHT_GRAY);
+        Polygon rightWall = new Polygon();
+        rightWall.addPoint(0,0);
+        rightWall.addPoint(84,50);
+        rightWall.addPoint(84,500);
+        rightWall.addPoint(0,700);
+        g.drawPolygon(rightWall);
+        g.fillPolygon(rightWall);
+
+        g.setPaint(Color.LIGHT_GRAY);
+        Polygon leftWall = new Polygon();
+        leftWall.addPoint(1088,50);
+        leftWall.addPoint(1200,0);
+        leftWall.addPoint(1200,700);
+        leftWall.addPoint(1088,500);
+        g.drawPolygon(leftWall);
+        g.fillPolygon(leftWall);
+
+        g.setColor(Color.BLACK);
         g.drawLine(0, 0, 84, 50);
         g.drawLine(1200, 0, 1088, 50);
         g.drawLine(0, 700, 86, 500);
         g.drawLine(1200, 700, 1085, 500);
+
+        Color colorFloor = new Color(142, 72, 34);
+        g.setPaint(colorFloor);
+        Polygon floor = new Polygon();
+        floor.addPoint(4,701);
+        floor.addPoint(89,503);
+        floor.addPoint(1083,503);
+        floor.addPoint(1200,701);
+        g.drawPolygon(floor);
+        g.fillPolygon(floor);
     }
 
     public static void drawWindow(Graphics2D g, Color c) {

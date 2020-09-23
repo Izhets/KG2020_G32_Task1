@@ -9,6 +9,7 @@ public class DrawPanel extends JPanel {
     private Room r = new Room(Color.darkGray);
     private Carpet c = new Carpet (Color.darkGray);
     private Table t = new Table (Color.darkGray);
+    private Cat cat = new Cat (Color.LIGHT_GRAY);
 
     @Override
     public void paint(Graphics g) {
@@ -17,6 +18,7 @@ public class DrawPanel extends JPanel {
         r.draw(gr);
         c.draw(gr);
         t.draw(gr);
+        cat.draw(gr);
 
         //drawRoom(gr, Color.BLACK);
         //drawCarpet(gr, Color.BLACK);
