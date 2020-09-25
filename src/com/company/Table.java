@@ -27,10 +27,10 @@ public class Table implements Drawable {
         g.fillPolygon(p1);
 
         g.setPaint(Color.BLACK);
-        g.fillRect(610,367, 30, 150);
-        g.fillRect(964,367, 30, 150);
-        g.fillRect(943,472, 30, 150);
-        g.fillRect(580,472, 30, 150);
+        g.fillRect(610, 367, 30, 150);
+        g.fillRect(964, 367, 30, 150);
+        g.fillRect(943, 472, 30, 150);
+        g.fillRect(580, 472, 30, 150);
 
         g.setColor(c);
         BasicStroke sizeLine = new BasicStroke(5);

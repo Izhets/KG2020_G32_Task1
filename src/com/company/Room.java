@@ -15,7 +15,8 @@ public class Room implements Drawable {
         drawRoom(g, c);
         drawWindow(g, c);
         drawDoor(g, c);
-        //paintComponent(g);
+        windowGradient(g);
+        publicGradient(g);
     }
 
     public static void drawRoom(Graphics2D g, Color c) {
@@ -26,23 +27,23 @@ public class Room implements Drawable {
         g.drawRect(88, 50, 995, 450);
 
         g.setColor(Color.LIGHT_GRAY);
-        g.fillRect(91,53, 990, 445);
+        g.fillRect(91, 53, 990, 445);
 
         g.setPaint(Color.LIGHT_GRAY);
         Polygon rightWall = new Polygon();
-        rightWall.addPoint(0,0);
-        rightWall.addPoint(84,50);
-        rightWall.addPoint(84,500);
-        rightWall.addPoint(0,700);
+        rightWall.addPoint(0, 0);
+        rightWall.addPoint(84, 50);
+        rightWall.addPoint(84, 500);
+        rightWall.addPoint(0, 700);
         g.drawPolygon(rightWall);
         g.fillPolygon(rightWall);
 
         g.setPaint(Color.LIGHT_GRAY);
         Polygon leftWall = new Polygon();
-        leftWall.addPoint(1088,50);
-        leftWall.addPoint(1200,0);
-        leftWall.addPoint(1200,700);
-        leftWall.addPoint(1088,500);
+        leftWall.addPoint(1088, 50);
+        leftWall.addPoint(1200, 0);
+        leftWall.addPoint(1200, 700);
+        leftWall.addPoint(1088, 500);
         g.drawPolygon(leftWall);
         g.fillPolygon(leftWall);
 
@@ -55,36 +56,34 @@ public class Room implements Drawable {
         Color colorFloor = new Color(142, 72, 34);
         g.setPaint(colorFloor);
         Polygon floor = new Polygon();
-        floor.addPoint(4,701);
-        floor.addPoint(89,503);
-        floor.addPoint(1083,503);
-        floor.addPoint(1200,701);
+        floor.addPoint(4, 701);
+        floor.addPoint(89, 503);
+        floor.addPoint(1083, 503);
+        floor.addPoint(1200, 701);
         g.drawPolygon(floor);
         g.fillPolygon(floor);
     }
 
 
-//    public void paintComponent(Graphics g){
-//        //super.paintComponent(g);
-//        Graphics2D g2d = (Graphics2D)g;
-//        //int w = getWidth();
-//       // int h = getHeight();
-//
-//        // Vertical
-//        GradientPaint gp = new GradientPaint(
-//                0, 0, new Color(0,0,0,0),
-//                0, 700, Color.black);
-//
-//        // Horizontal
-//        GradientPaint gp2 = new GradientPaint(
-//                0, 0, Color.white,
-//                1200, 0, Color.red, true);
-//
-//        g2d.setPaint(gp2);
-//        g2d.fillRect(0, 0, 1200, 700);
-//        g2d.setPaint(gp);
-//        g2d.fillRect(0, 0, 1200, 700);
-//    }
+    public void windowGradient(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        int w = 1200;
+        int h = 705;
+
+        // Vertical
+        GradientPaint gp = new GradientPaint(
+                0, 0, new Color(0, 0, 0, 0), 0, h, Color.BLUE);
+
+        g2d.setPaint(gp);
+
+        Polygon p1 = new Polygon();
+        p1.addPoint(49, 400);
+        p1.addPoint(0, 500);
+        p1.addPoint(0, 110);
+        p1.addPoint(49, 130);
+
+        g2d.fillPolygon(p1);
+    }
 
     public static void drawWindow(Graphics2D g, Color c) {
         g.setPaint(Color.cyan);
@@ -109,8 +108,8 @@ public class Room implements Drawable {
         g.drawPolygon(p2);
         //g.fillPolygon(p2);
 
-        g.drawLine(49,260,0,345);
-        g.drawLine(20,119,20,455);
+        g.drawLine(49, 260, 0, 345);
+        g.drawLine(20, 119, 20, 455);
     }
 
     public static void drawDoor(Graphics2D g, Color c) {
@@ -148,4 +147,24 @@ public class Room implements Drawable {
 
     }
 
+    public void publicGradient(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        int w = 1200;
+        int h = 705;
+
+        // Vertical
+        GradientPaint gp = new GradientPaint(
+                0, 0, new Color(0, 0, 0, 20),
+                1200, h, Color.BLACK);
+
+        // Horizontal
+        GradientPaint gp2 = new GradientPaint(
+                0, 0, Color.white,
+                w, 0, Color.red, true);
+
+        g2d.setPaint(gp2);
+        //g2d.fillRect(0, 0, w, h);
+        g2d.setPaint(gp);
+        g2d.fillRect(0, 0, w, h);
+    }
 }

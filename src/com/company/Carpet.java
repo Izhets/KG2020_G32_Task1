@@ -14,15 +14,9 @@ public class Carpet implements Drawable {
     @Override
     public void draw(Graphics2D g) {
         drawСarpet(g, c);
-        //g.setPaint(Color.BLACK);
         drawSquare(g, 430, 250, 145, 4, -1);
         drawSquare(g, 590, 250, 50, 4, -1);
         drawSquare(g, 750, 250, 145, 4, -1);
-        //drawSquare(g, 380, 250, 145, 4, -1);
-        //drawSquare(g, 590, 250, 110, 4, -1);
-        //drawSquare(g, 585, 200, 80,4, -1);
-        //drawSquare(g, 585, 300, 80, 4, -1);
-        //drawSquare(g, 790, 250, 145, 4, -1);
     }
 
 

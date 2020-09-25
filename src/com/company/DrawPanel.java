@@ -5,7 +5,6 @@ import java.awt.*;
 
 public class DrawPanel extends JPanel {
 
-    //private Sun s = new Sun (130, 110,40,70,35, Color.BLACK);
     private Room room = new Room(Color.darkGray);
     private Carpet carpet = new Carpet(Color.darkGray);
     private Table table = new Table(Color.darkGray);
@@ -16,7 +15,6 @@ public class DrawPanel extends JPanel {
     @Override
     public void paint(Graphics g) {
         Graphics2D gr = (Graphics2D) g;
-        //s.draw(gr);
         room.draw(gr);
         carpet.draw(gr);
         table.draw(gr);

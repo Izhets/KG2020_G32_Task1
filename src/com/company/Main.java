@@ -1,8 +1,6 @@
 package com.company;
 
 import javax.swing.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
 
 public class Main {
 
@@ -13,7 +11,4 @@ public class Main {
 	dd.setSize(1220, 750);
 	dd.setVisible(true);
     }
-
-
-
 }

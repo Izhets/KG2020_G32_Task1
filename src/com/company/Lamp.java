@@ -12,10 +12,9 @@ public class Lamp implements Drawable {
 
     @Override
     public void draw(Graphics2D g) {
-        //drawBulb(g, c);
         drawSun(g, Color.YELLOW);
         drawLamp(g, c);
-
+        lampGradient(g);
     }
 
     public static void drawSun(Graphics2D g, Color c) {
@@ -37,13 +36,25 @@ public class Lamp implements Drawable {
         }
     }
 
-    public static void drawBulb(Graphics2D g, Color c) {
-        g.setColor(Color.ORANGE);
-        BasicStroke sizeLine = new BasicStroke(4);
-        g.setStroke(sizeLine);
-        g.drawOval(456, 130, 30, 40);
-        g.setColor(Color.YELLOW);
-        g.fillOval(456, 130, 30, 40);
+    public void lampGradient(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        int w = 120;
+        int h = 600;
+
+        // Vertical
+        GradientPaint gp = new GradientPaint(
+                0, 0, new Color(0, 0, 0, 0),
+                0, h, Color.black);
+
+        // Horizontal
+        GradientPaint gp2 = new GradientPaint(
+                0, 0, Color.BLACK,
+                w, 0, Color.lightGray, true);
+
+        g2d.setPaint(gp2);
+        g2d.fillArc(514, 120, 150, 100, 0, 180);
+
+        g2d.setPaint(gp);
     }
 
     public static void drawLamp(Graphics2D g, Color c) {

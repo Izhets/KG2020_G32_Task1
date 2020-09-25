@@ -19,14 +19,14 @@ public class Cloud implements Drawable {
         g.setColor(c);
         BasicStroke sizeLine = new BasicStroke(3);
         g.setStroke(sizeLine);
-        g.fillOval(725,160, 118, 90);
-        g.fillOval(800,190, 84, 74);
-        g.fillOval(760,200, 69, 64);
+        g.fillOval(725, 160, 118, 90);
+        g.fillOval(800, 190, 84, 74);
+        g.fillOval(760, 200, 69, 64);
 
         Polygon p1 = new Polygon();
-        p1.addPoint(735,231);
-        p1.addPoint(723,247);
-        p1.addPoint(757,238);
+        p1.addPoint(735, 231);
+        p1.addPoint(723, 247);
+        p1.addPoint(757, 238);
         g.fillPolygon(p1);
 
         g.setColor(Color.BLACK);
