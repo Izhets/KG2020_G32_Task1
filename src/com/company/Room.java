@@ -15,6 +15,7 @@ public class Room implements Drawable {
         drawRoom(g, c);
         drawWindow(g, c);
         drawDoor(g, c);
+        //paintComponent(g);
     }
 
     public static void drawRoom(Graphics2D g, Color c) {
@@ -61,6 +62,29 @@ public class Room implements Drawable {
         g.drawPolygon(floor);
         g.fillPolygon(floor);
     }
+
+
+//    public void paintComponent(Graphics g){
+//        //super.paintComponent(g);
+//        Graphics2D g2d = (Graphics2D)g;
+//        //int w = getWidth();
+//       // int h = getHeight();
+//
+//        // Vertical
+//        GradientPaint gp = new GradientPaint(
+//                0, 0, new Color(0,0,0,0),
+//                0, 700, Color.black);
+//
+//        // Horizontal
+//        GradientPaint gp2 = new GradientPaint(
+//                0, 0, Color.white,
+//                1200, 0, Color.red, true);
+//
+//        g2d.setPaint(gp2);
+//        g2d.fillRect(0, 0, 1200, 700);
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, 1200, 700);
+//    }
 
     public static void drawWindow(Graphics2D g, Color c) {
         g.setPaint(Color.cyan);
