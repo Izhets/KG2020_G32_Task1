@@ -17,6 +17,7 @@ public class Carpet implements Drawable {
         drawSquare(g, 430, 250, 145, 4, -1);
         drawSquare(g, 590, 250, 50, 4, -1);
         drawSquare(g, 750, 250, 145, 4, -1);
+        //publicGradient(g);
     }
 
 
@@ -76,5 +77,27 @@ public class Carpet implements Drawable {
                 g2.fill(r3);
             }
         }
+    }
+
+    //градиент
+    public void publicGradient(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        int w = 1200;
+        int h = 705;
+
+        // Vertical
+        GradientPaint gp = new GradientPaint(
+                0, 0, new Color(0, 0, 0, 10),
+                1200, h, Color.BLACK);
+
+        // Horizontal
+        GradientPaint gp2 = new GradientPaint(
+                0, 0, Color.white,
+                w, 0, Color.red, true);
+
+        g2d.setPaint(gp2);
+        //g2d.fillRect(0, 0, w, h);
+        g2d.setPaint(gp);
+        g2d.fillRect(0, 0, w, h);
     }
 }
